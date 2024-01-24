@@ -31,17 +31,41 @@
             margin: 0 10px;
         }
 
-        #welcome-container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        #social-media {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
+
+        .social-icon {
+            font-size: 80px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+
+        }
+
+        .social-icon:hover {
+            color: #007bb5; /* LinkedIn hover color */
+        }
+
+        .social-container {
+            flex: 0 0 50%; /* Two icons per row */
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .instagram { color: #405de6; } /* Instagram color */
+        .whatsapp { color: #25d366; } /* WhatsApp color */
+        .facebook { color: #1877f2; } /* Facebook color */
+        .twitter { color: #1da1f2; } /* Twitter color */
+
+        #welcome-container,
         #about-container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 20px auto;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
@@ -53,8 +77,9 @@
             padding: 10px;
             color: white;
             text-align: center;
-            position: fixed;
+            width: 100%;
             bottom: 0;
+            position: fixed;
             width: 100%;
         }
     </style>
@@ -63,27 +88,36 @@
 <!-- Modify your navbar section -->
 <div id="navbar">
     <h2>My Personal Blog</h2>
-    <a href="#home"><i class="fas fa-home"></i> Home</a>
-    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
-    <a href="#categories"><i class="fas fa-th-list"></i> Categories</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+    <!-- New social media tabs -->
+    <a href="#instagram"><i class="fab fa-instagram instagram"></i> </a>
+    <a href="#whatsapp"><i class="fab fa-whatsapp whatsapp"></i> </a>
+    <a href="#facebook"><i class="fab fa-facebook facebook"></i></a>
+    <a href="#twitter"><i class="fab fa-twitter twitter"></i></a>
 </div>
 
-
-    <div id="welcome-container">
-        <h1>Welcome to My Personal Blog</h1>
-        <p>This is the welcome page of my personal blog. Explore the latest articles, learn more about me, and discover interesting categories.</p>
-        <!-- Add more content or links as needed -->
+<!-- Social media boxes -->
+<div id="social-media">
+    <div class="social-container">
+        <a href="#instagram" class="social-icon fab fa-instagram instagram"></a>
     </div>
-
-    <div id="about-container">
-        <h1>About My Blog</h1>
-        <p>Learn more about the purpose and background of my blog. Discover the stories and experiences shared here.</p>
-        <!-- Add more content or links as needed -->
+    <div class="social-container">
+        <a href="#whatsapp" class="social-icon fab fa-whatsapp whatsapp"></a>
     </div>
-
-    <div id="footer">
-        &copy; {{ year }} MicheloMJ. All rights reserved.
+    <div class="social-container">
+        <a href="#facebook" class="social-icon fab fa-facebook facebook"></a>
     </div>
+    <div class="social-container">
+        <a href="#twitter" class="social-icon fab fa-twitter twitter"></a>
+    </div>
+</div>
+
+<div id="welcome-container">
+    <h1>Welcome to My Personal Blog</h1>
+    <p>This is the welcome page of my personal blog. Explore the latest articles, learn more about me, and discover interesting categories.</p>
+    <!-- Add more content or links as needed -->
+</div>
+<div id="footer">
+    &copy; {{ year }} MicheloMJ. All rights reserved.
+</div>
 </body>
 </html>
