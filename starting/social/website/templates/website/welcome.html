@@ -1,70 +1,38 @@
-<!-- blog.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add this to the head section of your HTML -->
-    <link rel="icon" href="/img/natec_official_symbol_only.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...YOUR-SHA512-HASH-HERE..." crossorigin="anonymous" />
-    
+    <!-- Favicon -->
+    <link rel="icon" href="img/natec_official_symbol_only.png" type="image/png">
     <title>Welcome to My Personal Blog</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f5f5f5;
-        }
-
-        #navbar {
-            background-color: #333;
-            padding: 10px;
-            color: white;
-            text-align: center;
-        }
-
-        #navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            margin: 0 10px;
         }
 
         #social-media {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
+            align-items: center;
+            margin: 10px 0;
         }
 
         .social-icon {
-            font-size: 80px;
+            font-size: 30px;
             margin: 0 10px;
             transition: color 0.3s ease;
-            text-decoration: none;
-
         }
 
         .social-icon:hover {
-            color: #007bb5; /* LinkedIn hover color */
+            color: #007bb5; /* Hover color for social icons */
         }
 
-        .social-container {
-            flex: 0 0 50%; /* Two icons per row */
-            box-sizing: border-box;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .instagram { color: #405de6; } /* Instagram color */
-        .whatsapp { color: #25d366; } /* WhatsApp color */
-        .facebook { color: #1877f2; } /* Facebook color */
-        .twitter { color: #1da1f2; } /* Twitter color */
-
-        #welcome-container,
-        #about-container {
+        #welcome-container {
             max-width: 800px;
             margin: 20px auto;
             background-color: white;
@@ -78,47 +46,51 @@
             padding: 10px;
             color: white;
             text-align: center;
-            width: 100%;
-            bottom: 0;
             position: fixed;
+            bottom: 0;
             width: 100%;
         }
     </style>
 </head>
 <body>
-<!-- Modify your navbar section -->
-<div id="navbar">
-    <h2>My Personal Blog</h2>
-    <!-- New social media tabs -->
-    <a href="#instagram"><i class="fab fa-instagram instagram"></i> </a>
-    <a href="#whatsapp"><i class="fab fa-whatsapp whatsapp"></i> </a>
-    <a href="#facebook"><i class="fab fa-facebook facebook"></i></a>
-    <a href="#twitter"><i class="fab fa-twitter twitter"></i></a>
-</div>
 
-<!-- Social media boxes -->
+<!-- Navbar using Bootstrap -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Personal Blog</a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Home</a>
+        <a class="nav-item nav-link" href="#">About</a>
+        <a class="nav-item nav-link" href="#">Categories</a>
+        <a class="nav-item nav-link" href="#">Contact</a>
+    </div>
+</nav>
+
+<!-- Social media icons -->
 <div id="social-media">
-    <div class="social-container">
-        <a href="#instagram" class="social-icon fab fa-instagram instagram"></a>
-    </div>
-    <div class="social-container">
-        <a href="#whatsapp" class="social-icon fab fa-whatsapp whatsapp"></a>
-    </div>
-    <div class="social-container">
-        <a href="#facebook" class="social-icon fab fa-facebook facebook"></a>
-    </div>
-    <div class="social-container">
-        <a href="#twitter" class="social-icon fab fa-twitter twitter"></a>
-    </div>
+    <a href="#" class="social-icon fab fa-instagram"></a>
+    <a href="#" class="social-icon fab fa-whatsapp"></a>
+    <a href="#" class="social-icon fab fa-facebook"></a>
+    <a href="#" class="social-icon fab fa-twitter"></a>
 </div>
 
-<div id="welcome-container">
-    <h1>Welcome to My Personal Blog</h1>
-    <p>This is the welcome page of my personal blog. Explore the latest articles, learn more about me, and discover interesting categories.</p>
+<!-- Welcome Container using Bootstrap container class -->
+<div id="welcome-container" class="container">
+    <h1 class="mt-4">Welcome to My Personal Blog</h1>
+    <p>Explore the latest articles, learn more about me, and discover interesting categories on my personal blog. Feel free to connect with me on social media!</p>
     <!-- Add more content or links as needed -->
 </div>
+
+<!-- Footer -->
 <div id="footer">
-    &copy; {{ year }} MicheloMJ. All rights reserved.
+    <div class="container">
+        &copy; {{ year }} MicheloMJ. All rights reserved.
+    </div>
 </div>
+
+<!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
