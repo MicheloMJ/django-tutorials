@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...YOUR-SHA512-HASH-HERE..." crossorigin="anonymous" />
     <!-- Favicon -->
     <link rel="icon" href="img/natec_official_symbol_only.png" type="image/png">
-    <title>Welcome to My Personal Blog</title>
+    <title>Login to My Personal Blog</title>
     <style>
         body {
             background-color: #f5f5f5;
         }
 
-        #social-media {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0;
+        #login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #login-container h2 {
+            text-align: center;
         }
 
         .social-icon {
@@ -31,85 +37,35 @@
         .social-icon:hover {
             color: #007bb5; /* Hover color for social icons */
         }
-
-        #welcome-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #footer {
-            background-color: #333;
-            padding: 10px;
-            color: white;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Responsive video container */
-        .video-container {
-            position: relative;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
 
-<!-- Navbar using Bootstrap -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">My Personal Blog</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link" href="#">Categories</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+<!-- Login Container using Bootstrap container class -->
+<div id="login-container" class="container">
+    <h2>Login to My Personal Blog</h2>
+
+    <!-- Login form -->
+    <form>
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
         </div>
-    </div>
-</nav>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
 
-<!-- Social media icons -->
-<div id="social-media">
-    <a href="#" class="social-icon fab fa-instagram"></a>
-    <a href="#" class="social-icon fab fa-whatsapp"></a>
-    <a href="#" class="social-icon fab fa-facebook"></a>
-    <a href="#" class="social-icon fab fa-twitter"></a>
-</div>
+        <!-- Login with social icons -->
+        <p>Or login with:</p>
+        <div class="text-center">
+            <a href="#" class="social-icon fab fa-google"></a>
+            <a href="#" class="social-icon fab fa-github"></a>
+            <a href="#" class="social-icon fab fa-apple"></a>
+        </div>
 
-<!-- Welcome Container using Bootstrap container class -->
-<div id="welcome-container" class="container">
-    <h1 class="mt-4">Welcome to My Personal Blog</h1>
-    <p class="lead">Explore the latest articles, learn more about me, and discover interesting categories on my personal blog. Feel free to connect with me on social media!</p>
-    <!-- Add more content or links as needed -->
-</div>
-
-<!-- Video Container using video tag -->
-<div class="video-container">
-    <video controls>
-        <source src="https://www.youtube.com/watch?v=WmUZnSezCFU&list=PPSV" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-<!-- Footer -->
-<div id="footer">
-    <div class="container">
-        &copy; {{ year }} MicheloMJ. All rights reserved.
-    </div>
+        <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+    </form>
 </div>
 
 <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
