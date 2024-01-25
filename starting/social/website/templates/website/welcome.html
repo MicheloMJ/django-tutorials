@@ -16,7 +16,7 @@
         }
 
         #login-container {
-            max-width: 400px;
+            max-width: 350px; /* Adjusted width */
             margin: 50px auto;
             background-color: white;
             padding: 20px;
@@ -30,12 +30,26 @@
 
         .social-icon {
             font-size: 30px;
-            margin: 0 10px;
+            margin: 0 8px; /* Adjusted spacing */
             transition: color 0.3s ease;
+            text-decoration: none; /* Remove underlining */
         }
 
         .social-icon:hover {
-            color: #007bb5; /* Hover color for social icons */
+            color: inherit; /* Use the original color on hover */
+        }
+
+        /* Color adjustments for specific icons */
+        .social-icon.fa-google {
+            color: #4285F4;
+        }
+
+        .social-icon.fa-github {
+            color: #333;
+        }
+
+        .social-icon.fa-apple {
+            color: #000;
         }
     </style>
 </head>
@@ -48,12 +62,10 @@
     <!-- Login form -->
     <form>
         <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password">
+            <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
 
         <!-- Login with social icons -->
