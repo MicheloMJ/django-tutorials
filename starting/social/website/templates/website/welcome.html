@@ -80,6 +80,25 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
+
+        /* Hover effect for Register button */
+        #register-button:hover {
+            background-color: #3e4142; /* Hover color */
+            color: white;
+            transition: ease-in-out 0.3s;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -117,6 +136,11 @@
     </form>
 </div>
 
+<!-- Footer -->
+<footer>
+    &copy; <span id="current-year"></span>. ReCode. All rights reserved
+</footer>
+
 <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -124,6 +148,11 @@
 
 <!-- Font Awesome JS (required for icons) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" integrity="sha512-...YOUR-SHA512-HASH-HERE..." crossorigin="anonymous"></script>
+
+<!-- Script to update current year in the footer -->
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
